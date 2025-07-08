@@ -43,7 +43,12 @@ export default function Info() {
     fetchLogs();
   }, []);
 
-  if (userEmail && userEmail !== 'akankshakadam.k@gmail.com') {
+  const adminEmails = [
+    'akankshakadam.k@gmail.com',
+    'sgundavade@gmail.com',
+  ];
+  
+  if (userEmail && !adminEmails.includes(userEmail)) {
     return (
       <Container sx={{ mt: 5 }}>
         <Typography variant="h6" color="error" align="center">
@@ -52,6 +57,7 @@ export default function Info() {
       </Container>
     );
   }
+  
 
   return (
     <Container sx={{ mt: 5 }}>
