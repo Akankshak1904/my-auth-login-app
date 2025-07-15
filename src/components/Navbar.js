@@ -1,4 +1,3 @@
-// src/components/Navbar.js
 'use client';
 
 import {
@@ -13,6 +12,7 @@ import {
   MenuItem,
 } from '@mui/material';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { auth } from '../firebase';
 import { signOut, onAuthStateChanged } from 'firebase/auth';
@@ -38,14 +38,25 @@ export default function Navbar() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: '#6c63ff' }}>
+    <AppBar position="static" sx={{ backgroundColor: '#001f4d' /* Navy Blue */ }}>
       <Toolbar sx={{ justifyContent: 'space-between' }}>
-        {/* Left side: Title */}
-        <Typography variant="h6">
-          My Login Page
-        </Typography>
+        {/* Left: Logo + Title */}
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+          <Link href="/" passHref>
+            <Image
+              src="/logo.png"
+              alt="Logo"
+              width={40}
+              height={40}
+              style={{ cursor: 'pointer', borderRadius: '4px' }}
+            />
+          </Link>
+          <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+            MiNi
+          </Typography>
+        </Box>
 
-        {/* Right side: Nav + User */}
+        {/* Right: Navigation and User */}
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           <Button color="inherit" component={Link} href="/">Home</Button>
           <Button color="inherit" component={Link} href="/info">Info</Button>
@@ -62,7 +73,7 @@ export default function Navbar() {
                 {user.displayName || user.email}
               </Typography>
               <IconButton onClick={handleMenuOpen}>
-                <Avatar src={user.photoURL} />
+                <Avatar src={user.photoURL || ''} />
               </IconButton>
               <Menu
                 anchorEl={anchorEl}
