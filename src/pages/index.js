@@ -11,7 +11,7 @@ export default function Home() {
       >
         <Box sx={{ textAlign: 'center', p: 4, background: '#f2f4f6', borderRadius: 3 }}>
           <Typography variant="h4" gutterBottom>
-            Welcome to My Login Page
+            Welcome to MiNi
           </Typography>
           <Typography variant="body1">
             Secure sign in with Google or Outlook. Only Admin can see login history.
