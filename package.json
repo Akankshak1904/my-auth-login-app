@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^7.1.2",
     "@mui/material": "^7.1.2",
+    "d3": "^7.9.0",
     "firebase": "^11.9.1",
     "framer-motion": "^12.19.1",
     "next": "15.3.4",
