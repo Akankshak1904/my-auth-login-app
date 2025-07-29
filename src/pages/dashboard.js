@@ -28,7 +28,7 @@ export default function Dashboard() {
   }, []);
 
   useEffect(() => {
-    if (!user || user.email !== "harshusk25@gmail.com") return;
+    if (!user || user.email !== "akankshakadam.k@gmail.com") return;
 
     const logsRef = collection(db, 'loginLogs');
 
@@ -70,7 +70,7 @@ export default function Dashboard() {
     );
   }
 
-  if (user.email !== "harshusk25@gmail.com") {
+  if (user.email !== "akankshakadam.k@gmail.com") {
     return (
       <Container sx={{ mt: 10, textAlign: 'center' }}>
         <Typography variant="h5">Access Denied: Admins Only</Typography>

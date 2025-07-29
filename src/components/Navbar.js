@@ -60,6 +60,7 @@ export default function Navbar() {
         <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
           <Button color="inherit" component={Link} href="/">Home</Button>
           <Button color="inherit" component={Link} href="/info">Info</Button>
+          <Button color="inherit" component={Link} href="/dashboard">Dashboard</Button>
 
           {!user && (
             <Button color="inherit" component={Link} href="/login">
