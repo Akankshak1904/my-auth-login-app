@@ -46,6 +46,7 @@ export default function Info() {
   const adminEmails = [
     'akankshakadam.k@gmail.com',
     'sgundavade@gmail.com',
+    'mini.ais256@gmail.com',
   ];
   
   if (userEmail && !adminEmails.includes(userEmail)) {
